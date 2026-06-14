@@ -62,13 +62,6 @@
   transform: translateY(0);
 }
 
-.section-image {
-  width: 100%;
-  max-width: 600px;
-  margin-top: 20px;
-  border-radius: 12px;
-}
-
 @media (max-width: 768px) {
 
   /* セクションの枠を画面いっぱいに広げる */
