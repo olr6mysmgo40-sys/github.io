@@ -63,7 +63,7 @@
   .section-image {
     width: auto;
     height: auto;
-    max-width: none;
+    max-width: 600px;
     margin: 0;
     display: inline;
   }
@@ -81,6 +81,7 @@
   .fade-item img,
   .section-image {
     width: 100%;
+    max-width: 95vw;
     height: auto;
     display: block;
     margin: 0 auto;
