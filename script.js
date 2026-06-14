@@ -5,14 +5,13 @@ window.addEventListener("DOMContentLoaded", () => {
   const first = panels[0];
   const img = first.dataset.bg;
 
-  // ★ 最初の背景をセット
+  // ★ 最初の背景をセット（キャッシュバスター付き）
   bg.style.opacity = 0;
   setTimeout(() => {
-    bg.style.backgroundImage = `url(picture/${img})`;
+    bg.style.backgroundImage = `url(picture/${img}?v=1)`;
     bg.style.opacity = 1;
   }, 100);
 
-  // ★ 最初の文字もフェードイン
   fadeIn(first);
 });
 
@@ -27,39 +26,33 @@ window.addEventListener("scroll", () => {
   panels.forEach((panel, index) => {
     const rect = panel.getBoundingClientRect();
 
-    // ▼▼▼ 下方向 ▼▼▼
     if (down) {
       const prev = panels[index - 1];
       if (!prev) return;
 
       const prevRect = prev.getBoundingClientRect();
 
-      // ★ 前のセクションの bottom が画面外に出た瞬間
       if (prevRect.bottom <= 0 && index > activeIndex) {
         changeBackground(panel);
         activeIndex = index;
       }
 
-      // セクションが画面に入ったらフェードイン
       if (rect.top < window.innerHeight * 0.8 && index === activeIndex) {
         fadeIn(panel);
       }
     }
 
-    // ▼▼▼ 上方向 ▼▼▼
     else {
       const next = panels[index + 1];
       if (!next) return;
 
       const nextRect = next.getBoundingClientRect();
 
-      // ★ 上方向では「次のセクションの top が画面に入る直前」を使う
       if (rect.top >= 0 && index < activeIndex) {
         changeBackground(panel);
         activeIndex = index;
       }
 
-      // セクションが画面に入ったらフェードイン
       if (rect.top < window.innerHeight * 0.8 && index === activeIndex) {
         fadeIn(panel);
       }
@@ -71,7 +64,8 @@ function changeBackground(panel) {
   const img = panel.dataset.bg;
   bg.style.opacity = 0;
   setTimeout(() => {
-    bg.style.backgroundImage = `url(picture/${img})`;
+    // ★ 背景切替にもキャッシュバスターを付ける
+    bg.style.backgroundImage = `url(picture/${img}?v=1)`;
     bg.style.opacity = 1;
   }, 300);
 }
