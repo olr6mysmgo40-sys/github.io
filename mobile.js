@@ -47,7 +47,7 @@ window.addEventListener("scroll", () => {
   lastY = y;
 
   if (down) {
-    // ▼ 下方向：上から順にチェック
+    // ▼ 下方向：上から順
     panels.forEach((panel, index) => {
       const rect = panel.getBoundingClientRect();
       const prev = panels[index - 1];
@@ -67,7 +67,7 @@ window.addEventListener("scroll", () => {
   }
 
   else {
-    // ▼ 上方向：下から順にチェック（ここが最重要）
+    // ▼ 上方向：下から順（forEach の外）
     for (let index = panels.length - 1; index >= 0; index--) {
       const panel = panels[index];
       const rect = panel.getBoundingClientRect();
@@ -76,11 +76,10 @@ window.addEventListener("scroll", () => {
 
       const nextRect = next.getBoundingClientRect();
 
-      // 次のパネルの top が画面下に戻ったら切り替え
       if (nextRect.top >= window.innerHeight - 10 && index < activeIndex) {
         changeBackground(panel);
         activeIndex = index;
-        break; // ← これが超重要（複数回発火防止）
+        break;
       }
 
       if (rect.top < window.innerHeight * 0.8 && index === activeIndex) {
