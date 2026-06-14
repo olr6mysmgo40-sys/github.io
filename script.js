@@ -47,7 +47,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.5  // ← セクションが100%画面内に入ったら発火
+  threshold: 0  // ← セクションが100%画面内に入ったら発火
 });
 
 // 全セクションを監視
