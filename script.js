@@ -1,3 +1,27 @@
+// ★ 背景画像を事前に読み込む（プリキャッシュ）
+const bgImages = [
+  "姫楓菜.png",
+  "IMG_0031.jpeg",
+  "IMG_0078.jpeg",
+  "IMG_0141.jpeg",
+  "IMG_0236.jpeg",
+  "IMG_0246.jpeg",
+  "IMG_3864.jpeg",
+  "IMG_4268.jpeg",
+  "IMG_4491.jpeg",
+  "IMG_4758.jpeg",
+  "IMG_4920.jpeg",
+  "IMG_4984.jpeg",
+  "IMG_5157.jpeg",
+  "IMG_5226.jpeg"
+];
+
+bgImages.forEach(src => {
+  const img = new Image();
+  img.src = `picture/${src}?v=1`; // キャッシュバスター付き
+});
+
+
 const bg = document.getElementById("bg");
 const panels = document.querySelectorAll(".panel");
 
