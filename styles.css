@@ -1,56 +1,44 @@
-/* 背景レイヤー（常に後ろに表示） */
+/* ▼ 共通（スマホ・PC共通で必要なものだけ） */
 #bg {
   position: fixed;
   inset: 0;
-  background-size: contain; /* ← 切れない */
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
 }
 
-/* セクション本体（透明のまま） */
-/* セクション本体 */
 .panel {
-  min-height: 100vh;
-  padding: 80px 60px;
-  margin-bottom: 100vh;
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
   text-align: center;
-  position: relative; /* ← 必須 */
+  position: relative;
 }
 
-/* 白い箱（自然に縦に伸びる） */
+.panel.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .panel-content {
   background-color: rgba(255, 255, 255, 0);
   padding: 60px 40px;
   border-radius: 12px;
   max-width: 800px;
   width: 90%;
-  margin: 0 auto; /* ← 中央寄せ */
+  margin: 0 auto;
   transition: background-color 0.8s ease;
-
   display: flex;
   flex-direction: column;
-  gap: 20px; /* タイトル・文章・画像の間隔 */
+  gap: 20px;
   align-items: center;
 }
 
-
-/* セクションが見えたらフェードイン */
-.panel.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* ★ 2つ目以降のセクションだけ白背景を出す */
 .panel.visible:not(:first-of-type) .panel-content {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-/* 文字フェード */
 .fade-item {
   opacity: 0;
   transform: translateY(20px);
@@ -62,29 +50,31 @@
   transform: translateY(0);
 }
 
-/* ▼ PC（元のレイアウトに近い安定版） */
+/* ▼ PC専用 */
 @media (min-width: 769px) {
   .panel {
     min-height: 100vh;
-    margin-bottom: 60vh; /* ← 100vhだと通り過ぎるので少し短くする */
+    padding: 80px 60px;
+    margin-bottom: 100vh;
   }
 
   .panel img,
   .fade-item img,
   .section-image {
     width: auto;
-    max-width: none;
     height: auto;
+    max-width: none;
     margin: 0;
     display: inline;
   }
 }
 
-/* ▼ スマホ（くっつき防止 + 100vh問題対策） */
+/* ▼ スマホ専用 */
 @media (max-width: 768px) {
   .panel {
-    min-height: 100svh; /* ← スマホの100vh問題を解決 */
-    margin-bottom: 50vh; /* ← くっつき防止 */
+    min-height: 100svh;
+    padding: 40px 20px;
+    margin-bottom: 50vh;
   }
 
   .panel img,
@@ -96,4 +86,3 @@
     margin: 0 auto;
   }
 }
-
