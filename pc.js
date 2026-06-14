@@ -77,7 +77,7 @@ window.addEventListener("scroll", () => {
 
 function changeBackground(panel) {
   const img = panel.dataset.bg;
-  bg.style.opacity = 0;
+  //bg.style.opacity = 0;
   setTimeout(() => {
     bg.style.backgroundImage = `url(picture/${img}?v=1)`;
     bg.style.opacity = 1;
