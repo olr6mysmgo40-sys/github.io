@@ -1,22 +1,15 @@
 const bg = document.getElementById("bg");
 const panels = document.querySelectorAll(".panel");
 
-// ★ 背景画像プリキャッシュ
+// ★ スマホ判定
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+// ★ 背景プリキャッシュ
 const bgImages = [
-  "姫楓菜.png",
-  "IMG_0031.jpeg",
-  "IMG_0078.jpeg",
-  "IMG_0141.jpeg",
-  "IMG_0236.jpeg",
-  "IMG_0246.jpeg",
-  "IMG_3864.jpeg",
-  "IMG_4268.jpeg",
-  "IMG_4491.jpeg",
-  "IMG_4758.jpeg",
-  "IMG_4920.jpeg",
-  "IMG_4984.jpeg",
-  "IMG_5157.jpeg",
-  "IMG_5226.jpeg"
+  "姫楓菜.png","IMG_0031.jpeg","IMG_0078.jpeg","IMG_0141.jpeg",
+  "IMG_0236.jpeg","IMG_0246.jpeg","IMG_3864.jpeg","IMG_4268.jpeg",
+  "IMG_4491.jpeg","IMG_4758.jpeg","IMG_4920.jpeg","IMG_4984.jpeg",
+  "IMG_5157.jpeg","IMG_5226.jpeg"
 ];
 
 bgImages.forEach(src => {
@@ -24,7 +17,7 @@ bgImages.forEach(src => {
   img.src = `picture/${src}?v=1`;
 });
 
-// ★ 最初の背景セット
+// ★ 最初の背景
 window.addEventListener("DOMContentLoaded", () => {
   const first = panels[0];
   const img = first.dataset.bg;
@@ -38,14 +31,11 @@ window.addEventListener("DOMContentLoaded", () => {
   fadeIn(first);
 });
 
-// ★ スマホ判定
-const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-// ★ スマホとPCでObserver設定を分ける
+// ★ スマホとPCでObserverを完全に分ける
 let observer;
 
 if (isMobile) {
-  // ▼ スマホ用：画面が小さいので threshold は小さめ
+  // ▼ スマホ：画面が小さいので threshold は小さめ
   observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -54,11 +44,11 @@ if (isMobile) {
       }
     });
   }, {
-    threshold: 0.1   // ← スマホは10%見えたら切替
+    threshold: 0.05  // ← 5%見えたら切替（スマホ最適）
   });
 
 } else {
-  // ▼ PC用：自然な切替のため threshold を大きめ
+  // ▼ PC：画面が大きいので自然な切替
   observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -67,7 +57,7 @@ if (isMobile) {
       }
     });
   }, {
-    threshold: 0.6   // ← PCは60%見えたら切替
+    threshold: 0.4  // ← 40%見えたら切替（PC最適）
   });
 }
 
