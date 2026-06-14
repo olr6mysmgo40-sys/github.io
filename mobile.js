@@ -1,7 +1,3 @@
-// ▼ スマホ用ロジック（中央付近で切り替え）
-const bg = document.getElementById("bg");
-const panels = document.querySelectorAll(".panel");
-
 // ★ 背景プリキャッシュ
 const bgImages = [
   "姫楓菜.png","IMG_0031.jpeg","IMG_0078.jpeg","IMG_0141.jpeg",
@@ -14,6 +10,9 @@ bgImages.forEach(src => {
   const img = new Image();
   img.src = `picture/${src}?v=1`;
 });
+
+const bg = document.getElementById("bg");
+const panels = document.querySelectorAll(".panel");
 
 window.addEventListener("DOMContentLoaded", () => {
   const first = panels[0];
@@ -28,26 +27,50 @@ window.addEventListener("DOMContentLoaded", () => {
   fadeIn(first);
 });
 
-const observerMobile = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
+let activeIndex = 0;
+let lastY = window.scrollY;
 
-    const rect = entry.target.getBoundingClientRect();
-    const center = window.innerHeight / 2;
+window.addEventListener("scroll", () => {
+  const y = window.scrollY;
+  const down = y > lastY;
+  lastY = y;
 
-    // セクション中央が画面中央付近に来たら切替
-    const panelCenter = rect.top + rect.height / 2;
+  panels.forEach((panel, index) => {
+    const rect = panel.getBoundingClientRect();
 
-    if (Math.abs(panelCenter - center) < rect.height * 0.35) {
-      changeBackground(entry.target);
-      fadeIn(entry.target);
+    if (down) {
+      const prev = panels[index - 1];
+      if (!prev) return;
+
+      const prevRect = prev.getBoundingClientRect();
+
+      if (prevRect.bottom <= window.innerHeight * 0.2 && index > activeIndex) {
+        changeBackground(panel);
+        activeIndex = index;
+      }
+
+      if (rect.top < window.innerHeight * 0.8 && index === activeIndex) {
+        fadeIn(panel);
+      }
+    }
+
+    else {
+      const next = panels[index + 1];
+      if (!next) return;
+
+      const nextRect = next.getBoundingClientRect();
+
+      if (rect.top >= window.innerHeight * 0.2 && index < activeIndex) {
+        changeBackground(panel);
+        activeIndex = index;
+      }
+
+      if (rect.top < window.innerHeight * 0.8 && index === activeIndex) {
+        fadeIn(panel);
+      }
     }
   });
-}, {
-  threshold: 0.1
 });
-
-panels.forEach(panel => observerMobile.observe(panel));
 
 function changeBackground(panel) {
   const img = panel.dataset.bg;
