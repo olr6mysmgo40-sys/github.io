@@ -68,3 +68,10 @@
   margin-top: 20px;
   border-radius: 12px;
 }
+
+.fade-item img,
+.panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
