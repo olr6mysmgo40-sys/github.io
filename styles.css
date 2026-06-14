@@ -69,9 +69,26 @@
   border-radius: 12px;
 }
 
-.fade-item img,
-.panel img {
-  width: 100%;
-  height: auto;
-  display: block;
+@media (max-width: 768px) {
+
+  /* セクション全体を広く見せる */
+  .panel {
+    padding: 40px 20px; /* ← スマホでは左右の余白を減らす */
+  }
+
+  /* 中身を中央寄せにする */
+  .panel-content {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* 画像を中央にして大きくする */
+  .panel img,
+  .fade-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* ← これで中央寄せ */
+  }
 }
