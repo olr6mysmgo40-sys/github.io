@@ -18,14 +18,16 @@ window.addEventListener("DOMContentLoaded", () => {
   const first = panels[0];
   const img = first.dataset.bg;
 
-  bg.style.opacity = 0;
-  setTimeout(() => {
-    bg.style.backgroundImage = `url(picture/${img}?v=1)`;
-    bg.style.opacity = 1;
-  }, 100);
+  // ★ ここを強制的に即時反映させる
+  bg.style.backgroundImage = `url(picture/${img}?v=1)`;
+  bg.style.opacity = 1;
 
-  fadeIn(first);
+  // フェードインも確実に実行
+  setTimeout(() => {
+    fadeIn(first);
+  }, 50);
 });
+
 
 let activeIndex = 0;
 let lastY = window.scrollY;
