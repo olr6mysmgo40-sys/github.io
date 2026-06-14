@@ -86,7 +86,7 @@
   /* セクション枠を中央に固定 */
   .panel-content {
     width: 100%;
-    max-width: 600px; /* ← 好きな大きさに調整可能 */
+    max-width: 640px; /* ← 好きな大きさに調整可能 */
     margin: 0 auto;
     padding: 0px 0px; /* ← 左右の余白を最小に */
     box-sizing: border-box; /* ← はみ出し防止の最重要ポイント */
@@ -96,7 +96,7 @@
   .fade-item img,
   .section-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 640px;
     height: auto;
     display: block;
     margin: 0 auto;
