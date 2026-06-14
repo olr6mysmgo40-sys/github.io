@@ -71,20 +71,23 @@
 
 @media (max-width: 768px) {
 
-  /* セクションの枠を広げる（左右の余白を減らす） */
+  /* セクションの枠を画面いっぱいに広げる */
   .panel {
-    padding: 20px 10px; /* ← 左右の余白を小さくして枠を広げる */
+    padding: 0;          /* ← 左右の余白を完全にゼロにする */
+    margin: 0;
+    width: 100vw;        /* ← 画面幅いっぱいに広げる */
   }
 
-  /* 中身の枠を中央に寄せて幅を広げる */
+  /* 中身の枠も画面いっぱいに広げて中央寄せ */
   .panel-content {
     width: 100%;
-    max-width: 100%; /* ← PC用の max-width を無効化 */
-    margin: 0 auto;  /* ← 中央寄せ */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0;        /* ← ここも余白ゼロにする */
     text-align: center;
   }
 
-  /* 画像を中央にして大きく見せる */
+  /* 画像を最大サイズで中央に表示 */
   .panel img,
   .fade-item img {
     width: 100%;
@@ -93,3 +96,4 @@
     margin: 0 auto;
   }
 }
+
