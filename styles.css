@@ -71,24 +71,25 @@
 
 @media (max-width: 768px) {
 
-  /* セクション全体を広く見せる */
+  /* セクションの枠を広げる（左右の余白を減らす） */
   .panel {
-    padding: 40px 20px; /* ← スマホでは左右の余白を減らす */
+    padding: 20px 10px; /* ← 左右の余白を小さくして枠を広げる */
   }
 
-  /* 中身を中央寄せにする */
+  /* 中身の枠を中央に寄せて幅を広げる */
   .panel-content {
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%; /* ← PC用の max-width を無効化 */
+    margin: 0 auto;  /* ← 中央寄せ */
     text-align: center;
   }
 
-  /* 画像を中央にして大きくする */
+  /* 画像を中央にして大きく見せる */
   .panel img,
   .fade-item img {
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* ← これで中央寄せ */
+    margin: 0 auto;
   }
 }
