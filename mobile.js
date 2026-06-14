@@ -46,10 +46,10 @@ window.addEventListener("scroll", () => {
   const down = y > lastY;
   lastY = y;
 
-  panels.forEach((panel, index) => {
-    const rect = panel.getBoundingClientRect();
-
-    if (down) {
+  if (down) {
+    // ▼ 下方向：上から順にチェック
+    panels.forEach((panel, index) => {
+      const rect = panel.getBoundingClientRect();
       const prev = panels[index - 1];
       if (!prev) return;
 
@@ -63,25 +63,32 @@ window.addEventListener("scroll", () => {
       if (rect.top < window.innerHeight * 0.8 && index === activeIndex) {
         fadeIn(panel);
       }
-    }
+    });
+  }
 
-    else {
+  else {
+    // ▼ 上方向：下から順にチェック（ここが最重要）
+    for (let index = panels.length - 1; index >= 0; index--) {
+      const panel = panels[index];
+      const rect = panel.getBoundingClientRect();
       const next = panels[index + 1];
-      if (!next) return;
+      if (!next) continue;
 
       const nextRect = next.getBoundingClientRect();
 
       if (nextRect.top >= window.innerHeight - 10 && index < activeIndex) {
         changeBackground(panel);
         activeIndex = index;
+        break; // ← これが超重要（複数回発火防止）
       }
 
       if (rect.top < window.innerHeight * 0.8 && index === activeIndex) {
         fadeIn(panel);
       }
     }
-  });
+  }
 });
+
 
 function changeBackground(panel) {
   const img = panel.dataset.bg;
