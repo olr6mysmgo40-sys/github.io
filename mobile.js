@@ -111,3 +111,7 @@ function fadeIn(panel) {
     }, i * 200);
   });
 }
+
+html, body {
+  overscroll-behavior: none;
+}
