@@ -1,0 +1,70 @@
+/* 背景レイヤー（常に後ろに表示） */
+#bg {
+  position: fixed;
+  inset: 0;
+  background-size: contain; /* ← 切れない */
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+/* セクション本体（透明のまま） */
+/* セクション本体 */
+.panel {
+  min-height: 100vh;
+  padding: 80px 60px;
+  margin-bottom: 100vh;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  text-align: center;
+  position: relative; /* ← 必須 */
+}
+
+/* 白い箱（自然に縦に伸びる） */
+.panel-content {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 60px 40px;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto; /* ← 中央寄せ */
+  transition: background-color 0.8s ease;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* タイトル・文章・画像の間隔 */
+  align-items: center;
+}
+
+
+/* セクションが見えたらフェードイン */
+.panel.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ★ 2つ目以降のセクションだけ白背景を出す */
+.panel.visible:not(:first-of-type) .panel-content {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* 文字フェード */
+.fade-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-image {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
