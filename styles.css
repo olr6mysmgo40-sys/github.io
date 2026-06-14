@@ -81,7 +81,7 @@
   .fade-item img,
   .section-image {
     width: 100%;
-    max-width: 100vw;
+    max-width: 480px;
     height: auto;
     display: block;
     margin: 0 auto;
