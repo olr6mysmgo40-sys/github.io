@@ -15,19 +15,27 @@ bgImages.forEach(src => {
   img.src = `picture/${src}?v=1`;
 });
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const first = panels[0];
   const img = first.dataset.bg;
 
-  // ★ 画像を先に読み込んでから背景にセット
   const preload = new Image();
   preload.src = `picture/${img}?v=1`;
 
   preload.onload = () => {
     bg.style.backgroundImage = `url(picture/${img}?v=1)`;
-    bg.style.opacity = 1;   // ← 最初から表示される
-    fadeIn(first);          // ← 最初のセクションも確実に表示
+    bg.style.opacity = 1;
+    fadeIn(first);
   };
+
+  // 保険
+  setTimeout(() => {
+    if (!bg.style.backgroundImage) {
+      bg.style.backgroundImage = `url(picture/${img}?v=1)`;
+      bg.style.opacity = 1;
+      fadeIn(first);
+    }
+  }, 800);
 });
 
 let activeIndex = 0;
