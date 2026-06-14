@@ -55,7 +55,7 @@ window.addEventListener("scroll", () => {
 
       const prevRect = prev.getBoundingClientRect();
 
-      if (prevRect.bottom <= window.innerHeight + 300 && index > activeIndex) {
+      if (prevRect.bottom <= window.innerHeight + 100 && index > activeIndex) {
         changeBackground(panel);
         activeIndex = index;
       }
