@@ -90,3 +90,19 @@
   }
 }
 
+/* ▼ PC（元の画像サイズに戻す） */
+@media (min-width: 769px) {
+  .panel img,
+  .fade-item img,
+  .section-image {
+    width: auto;       /* ← 元の自然なサイズ */
+    max-width: none;   /* ← スマホの100%指定を解除 */
+    height: auto;
+    margin: 0;
+    display: inline;   /* ← 元の挙動に近い */
+  }
+
+  .panel {
+    min-height: 100vh; /* ← PCは従来通り */
+  }
+}
