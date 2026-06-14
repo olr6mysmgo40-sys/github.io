@@ -80,7 +80,7 @@
   .panel img,
   .fade-item img,
   .section-image {
-    width: 100%;
+    width: 120%;
     max-width: 520px;
     height: auto;
     display: block;
