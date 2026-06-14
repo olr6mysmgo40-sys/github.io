@@ -84,7 +84,7 @@
 @media (max-width: 768px) {
   .panel {
     min-height: 100svh; /* ← スマホの100vh問題を解決 */
-    margin-bottom: 40vh; /* ← くっつき防止 */
+    margin-bottom: 50vh; /* ← くっつき防止 */
   }
 
   .panel img,
