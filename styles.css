@@ -78,16 +78,16 @@
   
   .panel {
     min-height: 100svh;
-    padding: 0px 0px;
+    padding: 5px 0px;
     margin-bottom: 50vh;
   }
 
   /* セクション枠を中央に固定 */
   .panel-content {
     width: 100%;
-    max-width: 700px; /* ← 好きな大きさに調整可能 */
+    max-width: 600px; /* ← 好きな大きさに調整可能 */
     margin: 0 auto;
-    padding: 0px 0px; /* ← 左右の余白を最小に */
+    padding: 5px 0px; /* ← 左右の余白を最小に */
     box-sizing: border-box; /* ← はみ出し防止の最重要ポイント */
   }
 
@@ -95,7 +95,7 @@
   .fade-item img,
   .section-image {
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
     height: auto;
     display: block;
     margin: 0 auto;
