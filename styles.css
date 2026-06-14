@@ -62,27 +62,34 @@
   transform: translateY(0);
 }
 
-@media (max-width: 768px) {
-
-  /* セクションの枠を画面いっぱいに広げる */
+/* ▼ PC（元のレイアウトに近い安定版） */
+@media (min-width: 769px) {
   .panel {
-    padding: 0;          /* ← 左右の余白を完全にゼロにする */
-    margin: 0;
-    width: 100vw;        /* ← 画面幅いっぱいに広げる */
+    min-height: 100vh;
+    margin-bottom: 60vh; /* ← 100vhだと通り過ぎるので少し短くする */
   }
 
-  /* 中身の枠も画面いっぱいに広げて中央寄せ */
-  .panel-content {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 0;        /* ← ここも余白ゼロにする */
-    text-align: center;
-  }
-
-  /* 画像を最大サイズで中央に表示 */
   .panel img,
-  .fade-item img {
+  .fade-item img,
+  .section-image {
+    width: auto;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    display: inline;
+  }
+}
+
+/* ▼ スマホ（くっつき防止 + 100vh問題対策） */
+@media (max-width: 768px) {
+  .panel {
+    min-height: 100svh; /* ← スマホの100vh問題を解決 */
+    margin-bottom: 40vh; /* ← くっつき防止 */
+  }
+
+  .panel img,
+  .fade-item img,
+  .section-image {
     width: 100%;
     height: auto;
     display: block;
@@ -90,19 +97,3 @@
   }
 }
 
-/* ▼ PC（元の画像サイズに戻す） */
-@media (min-width: 769px) {
-  .panel img,
-  .fade-item img,
-  .section-image {
-    width: auto;       /* ← 元の自然なサイズ */
-    max-width: none;   /* ← スマホの100%指定を解除 */
-    height: auto;
-    margin: 0;
-    display: inline;   /* ← 元の挙動に近い */
-  }
-
-  .panel {
-    min-height: 100vh; /* ← PCは従来通り */
-  }
-}
