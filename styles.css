@@ -22,7 +22,7 @@
 }
 
 .panel-content {
-  background-color: rgba(255, 255, 255, 0);
+  background: #ffffff;
   padding: 60px 40px;
   border-radius: 12px;
   max-width: 800px;
@@ -36,7 +36,7 @@
 }
 
 .panel.visible:not(:first-of-type) .panel-content {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: #ffffff;
 }
 
 .fade-item {
