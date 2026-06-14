@@ -76,6 +76,7 @@ window.addEventListener("scroll", () => {
 
       const nextRect = next.getBoundingClientRect();
 
+      // 次のパネルの top が画面下に戻ったら切り替え
       if (nextRect.top >= window.innerHeight - 10 && index < activeIndex) {
         changeBackground(panel);
         activeIndex = index;
