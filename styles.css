@@ -19,19 +19,19 @@ body {
 .move-10 {
   align-self: flex-start;
   position: relative;
-  left: 10px;
+  margin-left: 10px;
 }
 
 .move-15 {
   align-self: flex-start;
   position: relative;
-  left: 15px;
+  margin-left: 15px;
 }
 
 .move-20 {
   align-self: flex-start;
   position: relative;
-  left: 15px;
+  margin-left: 15px;
 }
 
 .panel {
