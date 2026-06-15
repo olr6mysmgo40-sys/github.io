@@ -13,11 +13,13 @@ body {
 }
 
 .move-10 {
+  align-self: flex-start;
   position: relative;
   left: 10px;
 }
 
 .move-20 {
+  align-self: flex-start;
   position: relative;
   left: 20px;
 }
