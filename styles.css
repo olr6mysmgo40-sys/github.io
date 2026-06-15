@@ -178,6 +178,7 @@ body {
     margin: 0 auto;
     padding: 20px 24px; /* ← 左右の余白を最小に */
     box-sizing: border-box; /* ← はみ出し防止の最重要ポイント */
+    padding-left: 120px;
   }
 
   .panel img,
