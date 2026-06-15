@@ -16,7 +16,7 @@ body {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
-  //text-align: left;
+  text-align: center;
   position: relative;
 }
 
@@ -36,8 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  //align-items: flex-start;
-  //text-align: left; 
+  align-items: center;
 }
 
 .panel.visible:not(:first-of-type) .panel-content {
@@ -178,7 +177,6 @@ body {
     margin: 0 auto;
     padding: 0px 0px; /* ← 左右の余白を最小に */
     box-sizing: border-box; /* ← はみ出し防止の最重要ポイント */
-    padding-left: 50px;
   }
 
   .panel img,
@@ -256,4 +254,3 @@ body {
     box-shadow: 0 0 5px 3px white;
   }
 }
-
