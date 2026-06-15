@@ -14,12 +14,12 @@ body {
 
 .move-10 {
   position: relative;
-  left: 50px;
+  left: 10px;
 }
 
 .move-20 {
   position: relative;
-  left: 100px;
+  left: 20px;
 }
 
 .panel {
