@@ -12,6 +12,16 @@ body {
   z-index: -1;
 }
 
+.move-10 {
+  position: relative;
+  left: 10px;
+}
+
+.move-20 {
+  position: relative;
+  left: 20px;
+}
+
 .panel {
   opacity: 0;
   transform: translateY(40px);
