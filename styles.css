@@ -1,4 +1,8 @@
 /* ▼ 共通（スマホ・PC共通で必要なものだけ） */
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", sans-serif;
+  color: #4d5156;
+}
 #bg {
   position: fixed;
   inset: 0;
