@@ -103,8 +103,8 @@ function fadeIn(panel) {
   });
 }
 
-const images = document.querySelectorAll('img');
-const navContainer = document.querySelector('.nav-container');
+cconst images = document.querySelectorAll('.slider-container .image-container img');
+const navContainer = document.querySelector('.slider-container .nav-container');
 const totalImages = images.length;
 let imageIndex = 0;
 let interval;
