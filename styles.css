@@ -67,6 +67,67 @@
     margin: 0;
     display: inline;
   }
+  
+  .slider-container {
+    position: relative;
+    width: 330px;   /* ← ここを変えれば枠の大きさが変わる */
+    height: 495px;  /* ← ここも自由に変更OK */
+    border: 5px solid lightgray;
+    overflow: hidden; /* ← 画像がはみ出さないように */
+  }
+
+/* 画像コンテナ */
+  .image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+/* 画像 */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ← 切れないようにするなら contain */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .image-container img.image-active {
+    opacity: 1;
+  }
+
+/* ナビゲーション */
+  .nav-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+  }
+
+  .nav-btn {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+    background-color: #0d7df5;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-btn.btn-active {
+    background-color: #f99f3e;
+  }
+
+  .nav-btn:hover {
+    box-shadow: 0 0 5px 3px white;
+  }
 }
 
 /* ▼ スマホ専用 */
@@ -101,69 +162,69 @@
     display: block;
     margin: 0 auto;
   }
-}
 
-html, body {
-  overscroll-behavior-y: none;
-}
+  html, body {
+    overscroll-behavior-y: none;
+  }
 
-.slider-container {
-  position: relative;
-  width: 330px;   /* ← ここを変えれば枠の大きさが変わる */
-  height: 495px;  /* ← ここも自由に変更OK */
-  border: 5px solid lightgray;
-  overflow: hidden; /* ← 画像がはみ出さないように */
-}
+  .slider-container {
+    position: relative;
+    width: 330px;   /* ← ここを変えれば枠の大きさが変わる */
+    height: 495px;  /* ← ここも自由に変更OK */
+    border: 5px solid lightgray;
+    overflow: hidden; /* ← 画像がはみ出さないように */
+  }
 
-/* 画像コンテナ */
-.image-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-/* 画像 */
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* ← 切れないようにするなら contain */
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.image-container img.image-active {
-  opacity: 1;
-}
-
-/* ナビゲーション */
-.nav-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: lightgray;
-}
-
-.nav-btn {
-  height: 20px;
-  width: 20px;
-  margin: 10px;
-  background-color: #0d7df5;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-}
-
-.nav-btn.btn-active {
-  background-color: #f99f3e;
-}
-
-.nav-btn:hover {
-  box-shadow: 0 0 5px 3px white;
+  /* 画像コンテナ */
+  .image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  /* 画像 */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ← 切れないようにするなら contain */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .image-container img.image-active {
+    opacity: 1;
+  }
+  
+  /* ナビゲーション */
+  .nav-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+  }
+  
+  .nav-btn {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+    background-color: #0d7df5;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-btn.btn-active {
+    background-color: #f99f3e;
+  }
+  
+  .nav-btn:hover {
+    box-shadow: 0 0 5px 3px white;
+  }
 }
