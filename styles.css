@@ -27,7 +27,7 @@ body {
 
 .panel-content {
   background: #ffffff;
-  padding: 60px 80px;
+  padding: 60px 40px;
   border-radius: 12px;
   max-width: 800px;
   width: 90%;
@@ -176,7 +176,7 @@ body {
     width: 100%;
     max-width: 640px; /* ← 好きな大きさに調整可能 */
     margin: 0 auto;
-    padding: 20px 24px; /* ← 左右の余白を最小に */
+    padding: 0px 0px; /* ← 左右の余白を最小に */
     box-sizing: border-box; /* ← はみ出し防止の最重要ポイント */
     padding-left: 50px;
   }
