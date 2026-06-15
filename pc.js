@@ -4,10 +4,9 @@ const panels = document.querySelectorAll(".panel");
 
 // ★ 背景プリキャッシュ
 const bgImages = [
-  "姫楓菜.png","IMG_0031.jpeg","IMG_0078.jpeg","IMG_0141.jpeg",
-  "IMG_0236.jpeg","IMG_0246.jpeg","IMG_3864.jpeg","IMG_4268.jpeg",
-  "IMG_4491.jpeg","IMG_4758.jpeg","IMG_4920.jpeg","IMG_4984.jpeg",
-  "IMG_5157.jpeg","IMG_5226.jpeg"
+  "姫楓菜.heic","IMG_0031_E83E4BF3.heic","IMG_0078_2FD58F24.heic","IMG_0141_F6BC0A7F.heic","IMG_0236_8B73E1EF.heic",
+  "IMG_0246_0C60E47C.heic","IMG_3864_A37F02AC.heic","IMG_4268_02FCC5FE.heic","IMG_4491_689B42A0.heic","IMG_4758_3A37B092.heic",
+  "IMG_4920_CA21100B.heic","IMG_4984_16B269B6.heic","IMG_5706_BC02A030.heic","IMG_5157_CF4077C7.heic","IMG_5226_3BBD8F68.heic"
 ];
 
 bgImages.forEach(src => {
