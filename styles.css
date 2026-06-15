@@ -21,7 +21,7 @@ body {
 .move-20 {
   align-self: flex-start;
   position: relative;
-  left: 20px;
+  left: 15px;
 }
 
 .panel {
