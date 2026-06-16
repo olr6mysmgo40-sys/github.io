@@ -133,7 +133,7 @@ const galleryPhotos = [
    { src: "picture/20250906フリラお台場@清2026.jpg",caption: "" },
    { src: "picture/20250914FCイベントSUPERNOVA KAWASAKI_@さとる.jpg",caption: "" },
    { src: "picture/20251103ツアー名古屋@清2026.jpg",caption: "" },
-   { src: "picture/20251106_名古屋パルコリリイベ_すけとーだら.jpg",caption: "" },
+   { src: "picture/20251106_名古屋パルコリリイベ_すけとーだら.JPg",caption: "" },
    { src: "picture/20251123_ライブハウスツアー代官山UNIT_さとる.jpg",caption: "" },
    { src: "picture/20251123代官山UNIT_Izuru.jpg",caption: "" },
    { src: "picture/20251207_『わたしファンファーレ』リリイベ タワーレコード渋谷店9F イベントスペース(撮影者 ふくらぎ).jpg",caption: "" },
