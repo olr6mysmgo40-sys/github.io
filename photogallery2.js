@@ -202,7 +202,7 @@ const galleryPhotos = [
    { src: "picture/IMG_5706.jpeg",caption: "" },
    { src: "picture/IMG_6033.jpeg",caption: "" },
    { src: "picture/IMG_6087.jpeg",caption: "" },
-   { src: "picture/IMG_6444.jpeg,caption: "" },
+   { src: "picture/IMG_6444.jpeg",caption: "" },
    { src: "picture/IMG_6470.jpeg",caption: "" },
    { src: "picture/IMG_6767.jpeg",caption: "" },
    { src: "picture/IMG_6883.jpeg",caption: "" },
