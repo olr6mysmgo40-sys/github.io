@@ -20,7 +20,7 @@
 /* ギャラリー本体 */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 12px;
   padding: 20px;
   position: relative;
@@ -32,6 +32,7 @@
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  object-position: center center;
 }
 
 /* モーダル全体 */
