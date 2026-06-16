@@ -28,7 +28,7 @@ const bgPhotos = [
   "picture/20260118リリイベ汐留シオサイト_さとる-2.jpg",
   "picture/20260119_リリイベ汐留＠なめこっち(1)-2.jpeg",
   "picture/20260119_リリイベ汐留＠なめこっち(2)-2.jpeg",
-  "picture/20260206_TSUIMA Inc. presents さっぽろ雪まつり アイドルライブ みたらし大吾さん2.jpg",
+  "picture/20260206_TSUIMA Inc. presents さっぽろ雪まつり アイドルライブ みたらし大吾さん-2.jpg",
   "picture/20260206_TSUIMA Inc. presents さっぽろ雪まつり アイドルライブ みたらし大吾さん2-2.jpg",
   "picture/20260206_消え好き雪まつり_TadashiK-2.jpg",
   "picture/20260309_3rdアニラ_さとる-2.jpg",
