@@ -154,7 +154,7 @@ const galleryPhotos = [
    { src: "picture/20260206_消え好き@雪まつり_TadashiK.JPG",caption: "" },
    { src: "picture/20260309_3rdアニラ_@さとる.jpg",caption: "" },
    { src: "picture/20260309KTZepp横浜_Izuru.jpg",caption: "" },
-   { src: "picture/20260412_FCイベント_route727.jpg",caption: "" },
+   { src: "picture/20260412_FCイベント_route727.JPG",caption: "" },
    { src: "picture/20260412FCイベ_AOYAMA GRAND HALL_Izuru.jpg",caption: "" },
    { src: "picture/20260412FCイベ_九郎(クロウ).jpg",caption: "" },
    { src: "picture/20260419_『Yondanda』リリースイベントタワーレコード吉祥寺パルコ店 みたらし大吾さん.jpg",caption: "" },
