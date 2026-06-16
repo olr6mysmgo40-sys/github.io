@@ -111,63 +111,55 @@ function fadeIn(panel) {
   });
 }
 
-const images = document.querySelectorAll('.slider-container .image-container img');
-const navContainer = document.querySelector('.slider-container .nav-container');
-const totalImages = images.length;
-let imageIndex = 0;
-let interval;
+document.querySelectorAll('.slider-container').forEach(container => {
+  const images = container.querySelectorAll('.image-container img');
+  const navContainer = container.querySelector('.nav-container');
+  const totalImages = images.length;
+  let imageIndex = 0;
+  let interval;
 
-// 画像と同じ数のボタンを作成
-for (let i = 0; i < totalImages; i++) {
-  const button = document.createElement('button');
-  button.classList.add('nav-btn');
-  navContainer.appendChild(button);
-}
-
-// 作成したボタンを操作できるようにすべてのボタンをまとめて取得
-const buttons = document.querySelectorAll('.nav-btn');
-
-// すべてのボタンにクリックイベントを追加
-buttons.forEach((button,index) => {
-  button.addEventListener('click',() => {
-    imageIndex = index;
-    updateSlider();
-    resetInterval();
-  });
-});
-
-// 画像とボタンを更新
-function updateSlider() {
-  images.forEach(image => {
-    image.classList.remove('image-active');
-  });
-  buttons.forEach(button => {
-    button.classList.remove('btn-active');
-  });
-  images[imageIndex].classList.add('image-active');
-  buttons[imageIndex].classList.add('btn-active');
-}
-
-// 次の画像を指定して表示
-function nextImage() {
-  imageIndex++;
-  if (imageIndex > totalImages - 1) {
-    imageIndex = 0;
+  // ボタン生成
+  for (let i = 0; i < totalImages; i++) {
+    const button = document.createElement('button');
+    button.classList.add('nav-btn');
+    navContainer.appendChild(button);
   }
+
+  const buttons = navContainer.querySelectorAll('.nav-btn');
+
+  // ボタンクリック
+  buttons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      imageIndex = index;
+      updateSlider();
+      resetInterval();
+    });
+  });
+
+  function updateSlider() {
+    images.forEach(img => img.classList.remove('image-active'));
+    buttons.forEach(btn => btn.classList.remove('btn-active'));
+
+    images[imageIndex].classList.add('image-active');
+    buttons[imageIndex].classList.add('btn-active');
+  }
+
+  function nextImage() {
+    imageIndex++;
+    if (imageIndex >= totalImages) imageIndex = 0;
+    updateSlider();
+  }
+
+  function autoPlay() {
+    interval = setInterval(nextImage, 3000);
+  }
+
+  function resetInterval() {
+    clearInterval(interval);
+    autoPlay();
+  }
+
+  // 初期化
   updateSlider();
-}
-
-// 次の画像へ自動再生
-function autoPlay() {
-  interval = setInterval(nextImage, 3000);
-}
-
-// 自動再生を一旦停止してから再び再生
-function resetInterval() {
-  clearInterval(interval);
   autoPlay();
-}
-
-// スライドショーを開始
-updateSlider();
-autoPlay();
+});
