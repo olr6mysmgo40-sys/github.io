@@ -4,9 +4,9 @@ const panels = document.querySelectorAll(".panel");
 
 // ★ 背景プリキャッシュ
 const bgImages = [
-  "姫楓菜.png","IMG_0031.jpeg","IMG_0078.jpeg","IMG_0141.jpeg","IMG_0236.jpeg",
-  "IMG_0246.jpeg","IMG_3864.jpeg","IMG_4268.jpeg","IMG_4491.jpeg","IMG_4758.jpeg",
-  "IMG_4920.jpeg","IMG_4984.jpeg","IMG_5706.jpeg","IMG_5157.jpeg","IMG_5226.jpeg"
+  "姫楓菜.png","IMG_0031-2.jpeg","IMG_0078-2.jpeg","IMG_0141-2.jpeg","IMG_0236-2.jpeg",
+  "IMG_0246-2.jpeg","IMG_3864-2.jpeg","IMG_4268-2.jpeg","IMG_4491-2.jpeg","IMG_4758-2.jpeg",
+  "IMG_4920-2.jpeg","IMG_4984-2.jpeg","IMG_5706-2.jpeg","IMG_5157-2.jpeg","IMG_5226-2.jpeg"
 ];
 
 bgImages.forEach(src => {
