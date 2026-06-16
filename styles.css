@@ -118,8 +118,8 @@ body {
   
   .slider-container {
     position: relative;
-    width: 330px;   /* ← ここを変えれば枠の大きさが変わる */
-    height: 495px;  /* ← ここも自由に変更OK */
+    width: 500px;   /* ← ここを変えれば枠の大きさが変わる */
+    height: 650px;  /* ← ここも自由に変更OK */
     border: 5px solid lightgray;
     overflow: hidden; /* ← 画像がはみ出さないように */
   }
