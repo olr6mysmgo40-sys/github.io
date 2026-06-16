@@ -128,7 +128,7 @@ const galleryPhotos = [
    { src: "picture/20250628夏覚リリイベ新宿タワレコ_みみ.jpg", caption: "20250628\夏覚リリイベ\n新宿タワーレコード\nみみさん" },
    { src: "picture/20250712夏覚名古屋リリイベ_みみ.jpg",caption: "" },
    { src: "picture/20250809_リリイベ幕張イオン＠なめこっち.jpeg",caption: "" },
-   { src: "picture/20250824_Fancy Frontier開拓動漫祭 45花博公園爭艷館_ピーター.png",caption: "" },
+   { src: "picture/20250824_Fancy Frontier開拓動漫祭 45@花博公園爭艷館_ピーター.png",caption: "" },
    { src: "picture/20250906フリーライブダイバーシティ東京 _＠さとる.jpg",caption: "" },
    { src: "picture/20250906フリラお台場清2026.jpg",caption: "" },
    { src: "picture/20250914FCイベントSUPERNOVA KAWASAKI_さとる.jpg",caption: "" },
