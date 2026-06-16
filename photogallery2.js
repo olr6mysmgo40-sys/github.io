@@ -82,7 +82,7 @@ const bgPhotos = [
   "picture/IMG_5706-2.jpeg",
   "picture/IMG_6033-2.jpeg",
   "picture/IMG_6087-2.jpeg",
-  "picture/IMG_6444-2.jpeg,
+  "picture/IMG_6444-2.jpeg",
   "picture/IMG_6470-2.jpeg",
   "picture/IMG_6767-2.jpeg",
   "picture/IMG_6883-2.jpeg",
