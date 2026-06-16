@@ -142,7 +142,7 @@ const galleryPhotos = [
    { src: "picture/20251216_チャリやま.jpg",caption: "" },
    { src: "picture/20251221たつたつ.jpeg",caption: "" },
    { src: "picture/20260117_ リリイベタワーレコード吉祥寺パルコ店 みたらし大吾さん.jpg",caption: "" },
-   { src: "picture/20260117_タワレコ吉祥寺パルコ店_熊谷コーイチ.jpg",caption: "" },
+   { src: "picture/20260117_タワレコ吉祥寺パルコ店_熊谷コーイチ.JPG",caption: "" },
    { src: "picture/20260117_リリイベタワーレコード吉祥寺パルコ店 みたらし大吾さん(1).jpg",caption: "" },
    { src: "picture/20260117リリイベタワーレコード 吉祥寺パルコ店_＠さとる.jpg",caption: "" },
    { src: "picture/20260117リリイベ吉祥寺＠清2026.jpg",caption: "" },
