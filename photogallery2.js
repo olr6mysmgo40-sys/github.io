@@ -9,7 +9,7 @@ const bgPhotos = [
   "picture/20250809_リリイベ幕張イオン＠なめこっち-2.jpeg",
   "picture/20250824_Fancy Frontier開拓動漫祭 45花博公園爭艷館_ピーター-2.png",
   "picture/20250906フリーライブダイバーシティ東京 _＠さとる-2.jpg",
-  "picture/20250906フリラお台場@清2026-2.jpg",
+  "picture/20250906フリラお台場清2026-2.jpg",
   "picture/20250914FCイベントSUPERNOVA KAWASAKI_@さとる-2.jpg",
   "picture/20250906フリラお台場清2026-2.jpg",
   "picture/20251106_名古屋パルコリリイベ_すけとーだら-2.jpg",
