@@ -151,7 +151,7 @@ const galleryPhotos = [
    { src: "picture/20260119_リリイベ汐留＠なめこっち(2).jpeg",caption: "" },
    { src: "picture/20260206_TSUIMA Inc. presents さっぽろ雪まつり アイドルライブ みたらし大吾さん.jpg",caption: "" },
    { src: "picture/20260206_TSUIMA Inc. presents さっぽろ雪まつり アイドルライブ みたらし大吾さん2.jpg",caption: "" },
-   { src: "picture/20260206_消え好き雪まつり_TadashiK.jpg",caption: "" },
+   { src: "picture/20260206_消え好き@雪まつり_TadashiK.JPG",caption: "" },
    { src: "picture/20260309_3rdアニラ_さとる.jpg",caption: "" },
    { src: "picture/20260309KTZepp横浜_Izuru.jpg",caption: "" },
    { src: "picture/20260412_FCイベント_route727.jpg",caption: "" },
