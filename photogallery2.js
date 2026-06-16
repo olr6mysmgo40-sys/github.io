@@ -146,7 +146,7 @@ const galleryPhotos = [
    { src: "picture/20260117_リリイベタワーレコード吉祥寺パルコ店 みたらし大吾さん(1).jpg",caption: "" },
    { src: "picture/20260117リリイベタワーレコード 吉祥寺パルコ店_＠さとる.jpg",caption: "" },
    { src: "picture/20260117リリイベ吉祥寺＠清2026.jpg",caption: "" },
-   { src: "picture/20260118リリイベ汐留シオサイト_さとる.jpg",caption: "" },
+   { src: "picture/20260118リリイベ汐留シオサイト_@さとる.jpg",caption: "" },
    { src: "picture/20260119_リリイベ汐留＠なめこっち(1).jpeg",caption: "" },
    { src: "picture/20260119_リリイベ汐留＠なめこっち(2).jpeg",caption: "" },
    { src: "picture/20260206_TSUIMA Inc. presents さっぽろ雪まつり アイドルライブ みたらし大吾さん2.jpg",caption: "" },
