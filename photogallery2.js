@@ -11,7 +11,7 @@ const bgPhotos = [
   "picture/20250906フリーライブダイバーシティ東京 _＠さとる-2.jpg",
   "picture/20250906フリラお台場@清2026-2.jpg",
   "picture/20250914FCイベントSUPERNOVA KAWASAKI_@さとる-2.jpg",
-  "picture/20251103ツアー名古屋@清2026-2.jpg",
+  "picture/20250906フリラお台場清2026-2.jpg",
   "picture/20251106_名古屋パルコリリイベ_すけとーだら-2.jpg",
   "picture/20250906フリーライブダイバーシティ東京 _＠さとる-2.jpg",
   "picture/20251123代官山UNIT_Izuru-2.jpg",
