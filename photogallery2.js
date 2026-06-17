@@ -228,20 +228,23 @@ galleryPhotos.forEach(item => {
   img.dataset.caption = item.caption; // キャプションを保存
   gallery.appendChild(img);
 
-  // クリックでモーダルを開く
-  img.addEventListener('click', () => {
-    document.getElementById('modal-img').src = item.src;
-    document.getElementById('modal-caption').textContent = item.caption;
-    document.getElementById('modal').style.display = 'flex';
-  });
+// クリックでモーダルを開く
+img.addEventListener('click', () => {
+  document.getElementById('modal-img').src = item.src;
+  document.getElementById('modal-caption').textContent = item.caption;
+  document.getElementById('modal').style.display = 'flex';
 });
 
-/* モーダルを閉じる（背景クリックで閉じる） */
-document.getElementById('modal').addEventListener('click', () => {
-  document.getElementById('modal').style.display = 'none';
+// 背景クリックで閉じる（中身は閉じない）
+document.getElementById('modal').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('modal')) {
+    document.getElementById('modal').style.display = 'none';
+  }
 });
 
+// 閉じるボタン
 document.getElementById('modal-close').addEventListener('click', () => {
   document.getElementById('modal').style.display = 'none';
 });
+
 
