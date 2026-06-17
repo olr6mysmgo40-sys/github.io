@@ -20,6 +20,7 @@
 /* ギャラリー本体 */
 .gallery {
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 28px;
   padding: 20px;
