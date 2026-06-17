@@ -245,3 +245,5 @@ document.getElementById('modal-close').addEventListener('click', () => {
   document.getElementById('modal').style.display = 'none';
 });
 
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
