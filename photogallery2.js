@@ -125,10 +125,10 @@ for (let i = 0; i < bgCount; i++) {
 const gallery = document.querySelector('.gallery');
 
 const galleryPhotos = [
-   { src: "picture/20250628夏覚リリイベ新宿タワレコ_みみ.jpg", caption: "20250628\夏覚リリイベ\n新宿タワーレコード\nみみさん" },
-   { src: "picture/20250712夏覚名古屋リリイベ_みみ.jpg",caption: "" },
-   { src: "picture/20250809_リリイベ幕張イオン＠なめこっち.jpeg",caption: "" },
-   { src: "picture/20250824_Fancy Frontier開拓動漫祭 45@花博公園爭艷館_ピーター.png",caption: "" },
+   { src: "picture/20250628夏覚リリイベ新宿タワレコ_みみ.jpg", caption: "2025/06/28\夏覚リリイベ\n新宿タワーレコード\nみみさん" },
+   { src: "picture/20250712夏覚名古屋リリイベ_みみ.jpg",caption: "2025/07/12\夏覚リリイベ\名古屋\nみみさん" },
+   { src: "picture/20250809_リリイベ幕張イオン＠なめこっち.jpeg",caption: "2025/08/09\夏覚リリイベ\幕張イオン\nなめこっちさん" },
+   { src: "picture/20250824_Fancy Frontier開拓動漫祭 45@花博公園爭艷館_ピーター.png",caption: "2025/08/24\Fancy Frontier開拓動漫祭\台湾\nピーターさん" },
    { src: "picture/20250906フリーライブダイバーシティ東京 _＠さとる.jpg",caption: "" },
    { src: "picture/20250906フリラお台場@清2026.jpg",caption: "" },
    { src: "picture/20250914FCイベントSUPERNOVA KAWASAKI_@さとる.jpg",caption: "" },
