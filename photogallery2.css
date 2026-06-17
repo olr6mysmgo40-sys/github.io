@@ -93,5 +93,7 @@
   transform: scale(1.08);
 }
 
-
+img{
+ pointer-events: none;
+}
 
