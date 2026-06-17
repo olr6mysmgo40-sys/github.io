@@ -17,53 +17,29 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* ギャラリー本体 */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 12px;
-  padding: 20px;
-  position: relative;
-  z-index: 1;
+.simple-gallery {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.gallery img {
+.simple-gallery .item {
+  margin-bottom: 40px;
+}
+
+.simple-gallery img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* モーダル全体 */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(4px);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-/* モーダル内の画像 */
-.modal-content img {
-  max-width: 90%;
-  max-height: 70vh;
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* キャプション */
-.modal-content p {
-  color: #fff;
-  text-align: center;
-  margin-top: 12px;
+.simple-gallery .caption {
+  margin-top: 10px;
   font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+  text-align: center;
   white-space: pre-line;
 }
 
-/* モーダル内の配置 */
-.modal-content {
-  text-align: center;
-}
