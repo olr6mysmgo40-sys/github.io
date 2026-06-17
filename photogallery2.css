@@ -80,7 +80,7 @@
   height: 46px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 46px; /* ← 高さと合わせて中央に揃える */
   text-align: center; /* 念のため */
   color: #333;
