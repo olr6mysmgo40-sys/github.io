@@ -43,3 +43,6 @@
   white-space: pre-line;
 }
 
+img{
+ pointer-events: none;
+}
