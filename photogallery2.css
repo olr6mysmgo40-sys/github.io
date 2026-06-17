@@ -49,8 +49,8 @@
 
 /* モーダル内の画像 */
 .modal-content img {
-  max-width: 90%;
-  max-height: 70vh;
+  max-width: 95%;
+  max-height: 90vh;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
