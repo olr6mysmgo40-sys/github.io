@@ -241,3 +241,7 @@ document.getElementById('modal').addEventListener('click', () => {
   document.getElementById('modal').style.display = 'none';
 });
 
+document.getElementById('modal-close').addEventListener('click', () => {
+  document.getElementById('modal').style.display = 'none';
+});
+
